@@ -325,6 +325,7 @@ body{
 }
 /**********************************/
 /* Section Mealse begins here */
+/**********************************/
 .section-meals{
     padding: 9.6rem 0;
 }
@@ -444,3 +445,65 @@ strong{
     /* We would have used the above approach to remove the border line on hover but when you do it none it will jump 1px up which would look awkward further, so in order to hide it, we make use of a trick as transparent which hides it.*/
     border-bottom: 1px solid transparent;
 }
+/**********************************/
+/* Section Meals ends here */
+/**********************************/
+
+/**********************************/
+/* Section Testimonials begins here */
+/**********************************/
+.section-testimonials{
+    background-color: #fae5d3;
+    display: grid;
+    /* The below trick of using the fr's in terms of 50 or more than that is similar to the percentages concepts which gives clear understanding about the spaces */
+    grid-template-columns: 55fr 45fr;
+    align-items: center;
+}
+.testimonial-container{
+    padding: 9.6rem ;
+}
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.2rem;
+    column-gap: 8rem;
+}
+.testimonial-img{
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+.testimonial-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem
+}
+.testimonial-name{
+    font-size: 1.6rem;
+    color: #6f6f6f;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+.gallery-items{
+    /* We are using this property here because when we hover on the image it is overflowing its grid item, so in order to avoid that using the below property.*/
+    overflow: hidden;
+}
+.gallery-items img{
+    /* Writing this code to remove the unwanted whitespaces between the images though it is small.*/
+    display: block;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+.gallery-items img:hover{
+    transform: scale(1.1);
+}
+
+
+
+/**********************************/
+/* Section Testimonials ends here */
+/**********************************/
