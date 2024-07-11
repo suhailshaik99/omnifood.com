@@ -196,6 +196,33 @@ body{
 }
 /* Hero section ends here */
 /**********************************/
+/* Section logos begins here */
+.section-featured{
+    padding: 4.8rem 0 3.2rem;
+}
+.heading-featured-in{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #999;
+
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+
+}
+.logos img{
+    height: 3.2rem;
+    /* This filter property witht the value as brightness helps in making the images to completely black */
+    filter: brightness(0);
+    opacity: 0.5;
+}
+/* Section logos ends here */
+/**********************************/
 /* Header section begins here */
 .header{
     display: flex;
@@ -295,4 +322,125 @@ body{
     width: 45%;
     padding-bottom: 45%;
     z-index: -2;
+}
+/**********************************/
+/* Section Mealse begins here */
+.section-meals{
+    padding: 9.6rem 0;
+}
+.meal-title{
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+.meal-attributes{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.meal-attribute{
+    font-size: 1.8rem;
+    /* Since the <li> item contains the span tag and the icon tag we are making use of the flex property on each of the <li> items here. */
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.meal-img{
+    width: 100%;
+}
+.meal-icon{
+    height: 2.4rem;
+    width: 2.4rem;
+    /* We could have used stroke here, but this icons are being treated as text here, that's the reason we are using the color property here. */
+    color: #e67e22;
+}
+strong{
+    /* The default boldness with the strong tag was way too bold, hence reducing its font weight to as required. */
+    font-weight: 500;
+}
+.tag{
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    border-radius: 100px;
+    font-weight: 600;
+}
+.tag--vegetarian{
+    background-color: #51cf66;
+}
+.tag--vegan{
+    background-color: #94d82d;
+}
+.tag--paleo{
+    background-color: #ffd43b;
+}
+.meal-tags{
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+}
+.meal{
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+/* Adding a hover pseudo class to make the card jump slightly towards upside. */
+.meal:hover{
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+.meal-content{
+    padding: 4.8rem;
+    padding-top: 3.2rem;
+}
+.list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.list-icon{
+    height: 2rem;
+    width: 2rem;
+    color: #e67e22;
+}
+.list-item{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+/* Helper class to add margin bottom */
+.margin-bottom-md{
+    margin-bottom: 4.8rem !important;
+}
+/* Helper class to center the text */
+.center-text{
+    text-align: center;
+}
+.all-recipes{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.link:link,
+.link:visited{
+    text-decoration: none;
+    display: inline-block;
+    color: #e67e22;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.4s ease-out;
+}
+
+.link:hover,
+.link:active{
+    color: #cf711f;
+    /* border-bottom: none; */
+    /* We would have used the above approach to remove the border line on hover but when you do it none it will jump 1px up which would look awkward further, so in order to hide it, we make use of a trick as transparent which hides it.*/
+    border-bottom: 1px solid transparent;
 }
